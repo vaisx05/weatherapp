@@ -1,1 +1,1 @@
-const OPENWEATHER_API_KEY = "ad90864e5572c07f0c13179177875da3";
+const OPENWEATHER_API_KEY = "ur openweatherapi key";
