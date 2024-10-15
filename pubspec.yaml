@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   weather: ^3.1.1
   intl: ^0.19.0
+  flutter_launcher_icons: ^0.14.1
 
 dev_dependencies:
   flutter_test:
@@ -47,12 +48,20 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^4.0.0
+  flutter_lints: ^5.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
+
+# flutter_launcher_icons:
+#   android: true
+#   ios: false
+#   # image_path: "assets/icons/icon1.png"
+#   image_path_android: "assets/icons/icon1.png"
+
+
 flutter:
 
   # The following line ensures that the Material Icons font is
@@ -61,8 +70,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+     - assets/icons/icon1.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

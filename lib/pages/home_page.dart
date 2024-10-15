@@ -15,13 +15,31 @@ class _HomePageState extends State<HomePage> {
 
   Weather? _weather;
 
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   _wf.currentWeatherByCityName("Coimbatore, IN").then((w) {
+  //     setState(() {
+  //       _weather = w;
+  //     });
+  //   });
+  // }
+  Future<void> _loadData() async {
+    try {
+      final weather = await _wf.currentWeatherByCityName("Coimbatore, IN");
+      setState(() {
+        _weather = weather;
+      });
+    } catch (error) {
+      print("Error fetching weather: $error");
+    }
+  }
+
   @override
   void initState() {
     super.initState();
-    _wf.currentWeatherByCityName("Coimbatore, IN").then((w) {
-      setState(() {
-        _weather = w;
-      });
+    _loadData().then((_) {
+      // Handle any post-fetch actions here
     });
   }
 
